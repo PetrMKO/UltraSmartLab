@@ -90,7 +90,6 @@ fun BagActionsScreen(bag: BagModel, onBack: () -> Unit) {
         }
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
-//        verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             itemsIndexed(

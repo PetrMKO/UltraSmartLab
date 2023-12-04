@@ -58,7 +58,6 @@ fun BagsScreen(){
     if(selectedBag.value == null){
         LazyColumn(
             modifier = Modifier.fillMaxSize(),
-//        verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             itemsIndexed(

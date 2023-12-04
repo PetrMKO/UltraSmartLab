@@ -31,7 +31,7 @@ fun ListPage() {
         mutableStateOf<CompanyShareModel?>(null)
     }
 
-    var ctx = LocalContext.current
+    val ctx = LocalContext.current
     Log.d("MyLog", data.toString())
 
     getActionsList(data, ctx)
@@ -42,7 +42,6 @@ fun ListPage() {
 
     LazyColumn(
         modifier = Modifier.fillMaxSize(),
-//        verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         itemsIndexed(
@@ -57,7 +56,7 @@ fun ListPage() {
 
 fun getActionsList(state: MutableList<CompanyShareModel>, context: Context) {
     val url = "$baseUrl/list"
-    var queue = Volley.newRequestQueue(context)
+    val queue = Volley.newRequestQueue(context)
     val jsonArrayRequest = JsonArrayRequest(
         Request.Method.GET,
         url,
